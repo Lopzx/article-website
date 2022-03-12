@@ -1,11 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-// Body
-$main-color: #4D4D4D;
+// Colors
+$main-color: #151515;
+$secondary-color: rgba(77,77,77,1);
 $main-text-color: #FFFFFF;
 
+
+// Colors - Form
+$form-text-color: #959595;
+$main-form-bg-color: rgba(77,77,77,0.3);
+$main-input-bg-color : rgba(255,255,255,0.28);
+
+
 // Typography
-$font-family-sans-serif: 'Raleway', sans-serif;
+$font-raleway: 'Raleway';
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Body
+html, body{
+    font-family: $font-raleway !important;
+}
+
+
+// Background
+.bg-main-custom {
+    background-color: $main-color;
+    color: $main-text-color;
+}
+
+.bg-main-form-custom {
+    background-color: $main-form-bg-color !important;
+    color: $main-text-color;
+}
+
+.bg-input-form-custom {
+    background-color: $main-input-bg-color !important;
+    color: $form-text-color;
+}
+
+//Input Style
+// .custom-input {
+//     background-color: ;
+// }

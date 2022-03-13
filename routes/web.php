@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/create/article', [App\Http\Controllers\CreateArticleController::class, 'index'])->name('create_article');
+Route::post('/create/article',[App\Http\Controllers\CreateArticleController::class, 'createArticle'])->name('create_article');

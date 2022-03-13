@@ -11,6 +11,11 @@ body {
 }
 
 
+//Override
+.form-check-input:checked {
+    background-color: $main-form-bg-color;
+    border-color: $main-form-bg-color;
+}
 
 .form-container{
     height: 450px;
@@ -54,6 +59,11 @@ body {
                 display: flex;
                 justify-content: space-between;
                 padding: 0px 20px;
+
+                a{
+                    color : $main-text-color;
+                    text-decoration: none;
+                }
             }
 
             .btn-container{

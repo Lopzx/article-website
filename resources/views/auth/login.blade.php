@@ -35,7 +35,7 @@
                                 <img src="{{asset('images/icon/Arrow.png')}}" alt="">
                             </button>
                         </div>
-                        <p class="login-link-container text-center ">Don’t have any account? <b>Sign up</b></p>
+                        <p class="login-link-container text-center">Don’t have any account? <b>Sign up</b></p>
                     </form>
                 </div>
                 <div class="col p-0 right-container">

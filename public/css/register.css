@@ -3,6 +3,11 @@ html, body {
   font-family: "Raleway" !important;
 }
 
+a {
+  text-decoration: none !important;
+  color: #FFFFFF !important;
+}
+
 .bg-main-custom {
   background-color: #151515;
   color: #FFFFFF;
@@ -60,6 +65,9 @@ body {
   border-radius: 50px;
   overflow: hidden;
   border: 0px;
+}
+.form-container .register-form .login-link-container a {
+  font-weight: 800;
 }
 
 @media only screen and (max-width: 768px) {

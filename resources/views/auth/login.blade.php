@@ -8,24 +8,34 @@
     <main class="form-container container ">
         <div class="container h-100 p-0">
             <div class="row h-100 p-0 bg-main-form-custom">
-                <div class="col h-100 left-container">
-                    <form class="row g-3 register-form">
+                <div class="col h-100 left-container overflow-auto">
+                    <form action="{{route('login')}}" method="POST" class="row g-3 register-form">
+                        @csrf
                         <div class="header-wrapper">
                             <h1>Sign in</h1>
                             <p>Welcome to Articulasi</p>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                         </div>
                         <div class="row-md-6">
-                            <label for="inputEmail4" class="form-label">Full Name</label>
-                            <input type="text" class="form-control bg-input-form-custom custom-input" id="inputEmail4">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input name="email" type="email" class="form-control bg-input-form-custom custom-input" id="inputEmail">
                         </div>
                         <div class="row-md-6">
-                            <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control bg-input-form-custom custom-input" id="inputEmail4">
+                            <label for="inputPassword" class="form-label">Password</label>
+                            <input name="password" type="password" class="form-control bg-input-form-custom custom-input" id="inputPassword">
                         </div>
                         <div class="remember-forgot-container">
                             <div class="form-check remember-me">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
                             </div>
                             <a href="">Forget password?</a>
                         </div>
@@ -35,7 +45,7 @@
                                 <img src="{{asset('images/icon/Arrow.png')}}" alt="">
                             </button>
                         </div>
-                        <p class="login-link-container text-center">Don’t have any account? <b>Sign up</b></p>
+                        <p class="login-link-container text-center">Don’t have any account? <a href="{{route('register')}}">Sign up</a></p>
                     </form>
                 </div>
                 <div class="col p-0 right-container">

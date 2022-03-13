@@ -12,57 +12,68 @@
                     <div class="image-wrapper"></div>
                 </div>
                 <div class="col h-100 right-container">
-                    <form class="row g-3 register-form">
+                    <form action="{{route('register')}}" method="POST" class="row g-3 register-form">
+                        @csrf
                         <div class="header-wrapper">
                             <h1>Sign up</h1>
                             <p>Few more clicks away to get</p>
                             <p>yourself an account.</p>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                         </div>
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Full Name</label>
-                            <input type="text" class="form-control bg-input-form-custom custom-input" id="inputEmail4">
+                            <label for="input_fullname" class="form-label">Full Name</label>
+                            <input type="text" class="form-control bg-input-form-custom custom-input" id="input_fullname" name="input_fullname">
                             </div>
                             <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Username</label>
-                            <input type="text" class="form-control bg-input-form-custom custom-input" id="inputPassword4">
+                            <label for="input_username" class="form-label">Username</label>
+                            <input type="text" class="form-control bg-input-form-custom custom-input" id="input_username" name="input_username">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control bg-input-form-custom custom-input" id="inputEmail4">
+                            <label for="input_email" class="form-label">Email</label>
+                            <input type="email" class="form-control bg-input-form-custom custom-input" id="input_email" name="input_email">
                             </div>
                             <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Phone Number</label>
-                            <input type="text" class="form-control bg-input-form-custom custom-input" id="inputPassword4">
+                            <label for="input_phonenumber" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control bg-input-form-custom custom-input" id="input_phone_number" name="input_phonenumber">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Password</label>
-                            <input type="password" class="form-control bg-input-form-custom custom-input" id="inputEmail4">
+                            <label for="input_password" class="form-label">Password</label>
+                            <input type="password" class="form-control bg-input-form-custom custom-input" id="input_password" name="input_password">
                             </div>
                             <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control bg-input-form-custom custom-input" id="inputPassword4">
+                            <label for="input_confirmpassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control bg-input-form-custom custom-input" id="input_confirmpassword" name="input_password_confirmation">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Tempat lahir</label>
-                            <input type="email" class="form-control bg-input-form-custom custom-input" id="inputEmail4">
+                            <label for="input_tempatlahir" class="form-label">Tempat lahir</label>
+                            <input type="text" class="form-control bg-input-form-custom custom-input" id="input_tempatlahir" name="input_tempatlahir">
                             </div>
                             <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Tanggal lahir</label>
-                            <input type="date" class="form-control bg-input-form-custom custom-input" id="inputPassword4">
+                            <label for="input_tanggallahir" class="form-label">Tanggal lahir</label>
+                            <input type="date" class="form-control bg-input-form-custom custom-input" id="input_tanggallahir" name="input_tanggallahir">
                         </div>
-                        <div class="radio-wrapper d-flex gap-3">
+                        <div class="radio-wrapper d-flex gap-3 mx-4">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <input name="input_jeniskelamin" class="form-check-input" type="radio" id="inlineRadio1" value="0" required>
                                 <label class="form-check-label" for="inlineRadio1">Pria</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <input name="input_jeniskelamin" class="form-check-input" type="radio" id="inlineRadio2" value="1" required>
                                 <label class="form-check-label" for="inlineRadio2">Wanita</label>
                             </div>
                         </div>
                         <div class="col-auto w-100">
                             <button type="submit" class="btn bg-main-custom w-100" >Submit</button>
-                          </div>
+                        </div>
+                        <p class="login-link-container text-center">Already have an account? <a href="{{route('login')}}">Sign in</a></p>
                     </form>
                 </div>
             </div>

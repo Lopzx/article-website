@@ -3,6 +3,11 @@ html, body {
   font-family: "Raleway" !important;
 }
 
+a {
+  text-decoration: none !important;
+  color: #FFFFFF !important;
+}
+
 .bg-main-custom {
   background-color: #151515;
   color: #FFFFFF;
@@ -26,6 +31,10 @@ body {
   background-color: #151515;
   display: grid;
   place-items: center;
+  background-image: url("/images/background/login_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .form-check-input:checked {
@@ -42,7 +51,7 @@ body {
 .form-container .image-wrapper {
   width: 100%;
   height: 100%;
-  background-image: url("/images/background/register_bg.png");
+  background-image: url("/images/background/login_side_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -91,6 +100,9 @@ body {
 }
 .form-container .register-form .btn-container .login-btn img {
   height: 12px;
+}
+.form-container .register-form .login-link-container a {
+  font-weight: 800;
 }
 
 @media only screen and (max-width: 768px) {

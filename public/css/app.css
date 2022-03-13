@@ -5,6 +5,11 @@ html, body {
   font-family: "Raleway" !important;
 }
 
+a {
+  text-decoration: none !important;
+  color: #FFFFFF !important;
+}
+
 .bg-main-custom {
   background-color: #151515;
   color: #FFFFFF;

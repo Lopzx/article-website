@@ -18,9 +18,14 @@ $font-raleway: 'Raleway';
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-// Body
+// Default
 html, body{
     font-family: $font-raleway !important;
+}
+
+a{
+    text-decoration: none !important;
+    color: $main-text-color !important;
 }
 
 

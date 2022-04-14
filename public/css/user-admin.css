@@ -1,0 +1,50 @@
+#user-admin-page {
+    display: flex;
+    justify-content: center;
+}
+.user-admin-container {
+    width: 95%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.user-left {
+    width: 55%;
+}
+.user-right {
+    width: 40%;
+    background-color: #444444;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.article-box {
+    margin-top: 1rem;
+}
+.user-details-card {
+    width: 90%;
+}
+.card-header {
+    margin-top: 1rem;
+}
+.detail-header {
+    text-align: center;
+}
+.user-details {
+    width: 90%;
+}
+.user-detail {
+    margin-top: 1rem;
+}
+.detail-field {
+    height: 2rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+
+    font-family: poppins;
+    display: flex;
+    align-items: center;
+}

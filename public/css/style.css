@@ -1,0 +1,25 @@
+#home-articles {
+    display: flex;
+    justify-content: center;
+}
+.home-article-container {
+    width: 90%;
+    margin-top: 1em;
+}
+.tophr {
+    width: 70%;
+    color: #fff;
+}
+
+.article-full {
+    display: flex;
+}
+.article-img {
+    margin-left: 2em;
+    max-width: 25%;
+    max-height: 150px;
+    margin-bottom: 1em;
+}
+.article-text {
+    width: 70%;
+}

@@ -1,0 +1,16 @@
+#article-list {
+    display: flex;
+    justify-content: center;
+}
+.page-container {
+    width: 70%;
+}
+.list-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.article-box {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

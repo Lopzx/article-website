@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArticleModel;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     /**
@@ -21,8 +22,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function getDashboard()
     {
-        return view('home');
+
+        return view('dashboard',[
+            'articles' => ArticleModel::where('user_id',Auth::user()->id)->get()
+        ]);
     }
 }

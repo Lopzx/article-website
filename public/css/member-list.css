@@ -1,0 +1,63 @@
+#member-list {
+    display: flex;
+    justify-content: center;
+}
+.lists-container {
+    width: 90%;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+.member-list-card {
+    background-color: #fff;
+    width: 49%;
+    border-radius: 0.5rem;
+}
+.banned-list-card {
+    background-color: #fff;
+    width: 49%;
+    border-radius: 0.5rem;
+}
+.member-list-content {
+    margin: 0.5rem;
+}
+.member-a {
+    display: flex;
+    justify-content: space-between;
+}
+.ban {
+    font-size: 1.25em;
+    font-family: Poppins;
+    font-weight: 300;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    background-color: #DA0037;
+    border: 0;
+    border-radius:0.5rem;
+}
+.ban:hover {
+    background-color: #a9002a;
+    cursor: pointer;
+}
+.unban {
+    font-size: 1.25em;
+    font-family: Poppins;
+    font-weight: 300;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    background-color: #C4C4C4;
+    border: 0;
+    border-radius:0.5rem;
+}
+.unban:hover {
+    background-color: #939393;
+    cursor: pointer;
+}
+.spacing {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.title {
+    margin-top: 1rem;
+}

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\ArticleModel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('index', [
+        'articles' => ArticleModel::all()
+    ]);
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class,'getDashboard'])->name('dashboard');
 
+Route::get('/create/draft', [App\Http\Controllers\DraftController::class, 'index'])->name('create_draft');
+Route::post('/create/draft/img/{id}',[App\Http\Controllers\DraftController::class, 'uploadImage'])->name('upload_draft_image');
+Route::get('/create/draft/img/{id}', [App\Http\Controllers\DraftController::class, 'getImage'])->name('get_uploaded_image');
 
-Route::get('/create/article', [App\Http\Controllers\CreateArticleController::class, 'index'])->name('create_article');
-Route::post('/create/article',[App\Http\Controllers\CreateArticleController::class, 'createArticle'])->name('create_article');
+Route::get('/view/article/{id}', [App\Http\Controllers\ArticleController::class, 'viewArticle'])->name('view_article');
+Route::post('/create/article', [App\Http\Controllers\ArticleController::class, 'createArticle'])->name('create_article');
+Route::get('/delete/article/{id}',[App\Http\Controllers\ArticleController::class, 'deleteArticle'])->name('delete_article');

@@ -5,15 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ArticleModel extends Model
+class DraftModel extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
-        'article_title',
-        'article_body'
+        'user_id'
     ];
-
-    protected $table = 'article';
+    protected $table = 'draft';
 }

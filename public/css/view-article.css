@@ -1,0 +1,42 @@
+#view-article {
+    display: flex;
+    justify-content:center;
+}
+.article-container {
+    width: 90%;
+}
+.article-title {
+    text-align: center;
+}
+.article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-image {
+    width: 50%;
+    margin: 1rem;
+}
+.article-text {
+    width: 100%;
+}
+
+#article_body {
+    margin:auto;
+    color: white;
+    overflow-wrap: break-word;
+    max-width: 1200px;
+    margin-bottom : 20px;
+}
+
+#article_body img{
+    display: block;
+    height: 300px;
+    margin: auto;
+    width: 300px;
+
+}
+
+#article_content_text {
+    display: none !important;
+}
